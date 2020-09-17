@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TurbolinksSamePageAnchorsBug</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div style="height: 100px; width: 100%; position: fixed; background-color: #999999;">
+      <li style="list-style-type: none;">
+        <ul><%= link_to 'Home', root_path %></ul>
+        <ul><%= link_to 'About', about_path %></ul>
+      </li>
+    </div>
+
+
+    <div style="padding-top: 100px;">
+      <%= yield %>
+    </div>
+  </body>
+</html>
